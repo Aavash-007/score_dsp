@@ -7,7 +7,7 @@ clear; clc; clf; close all
 mute = true; % set this to false to hear audio throughout program
              % useful for debugging
 
-[song,Fs] = audioread('FurElise_Slow.mp3');
+[song,Fs] = audioread('Elise.mp3');
 Fs = Fs*4;   % speed up song (original audio file is very slow)
 figure, plot(song(:,1)), title('Fur Elise, entire song')
 
@@ -119,7 +119,7 @@ for i = 1:length(fundamentals)
     if ~mute, sound(a,fs); pause(.5); end
 end
 letter
-audiowrite('fur_elise_recreated.wav',recreate_song,fs);
+audiowrite('elise_recreated.wav',recreate_song,fs);
 % main program to extract notes from audio file
-% input file: FurElise_Slow.mp2
+% input file: Elise_Slow.mp2
 % relies on plotsound.m file for one (optional) function
